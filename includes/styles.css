@@ -8,3 +8,6 @@ body, html {
     font-family: "Open Sans", sans-serif;
     color: #5e5e5e;
 }
+header {
+    width: 100%;
+}
