@@ -10,7 +10,7 @@
 <body>
 <header>
     <div id="headerInside">
-        <!--<div id="logo"></div>
+        <div id="logo"></div>
         <div id="companyName">Brand</div>
         <div id="navWrap">
             <a href="#">
@@ -24,7 +24,7 @@
 </header>
 
 <div id="content">
-    <div id="promo">
+   <!-- <div id="promo">
         <h1 id="promoText">
             Здесь будет рекламный заголовок
         </h1>
