@@ -13,10 +13,10 @@
         <div id="logo"></div>
         <div id="companyName">Brand</div>
         <div id="navWrap">
-            <a href="#">
+            <a href="/">
                 Главная
             </a>
-            <a href="#">
+            <a href="/index.php?page=shop">
                 Магазин
             </a>
         </div>
@@ -50,12 +50,21 @@
 ];
        $page = $_GET['page'];
        if(!isset($page)) {
-           echo 'Контен для главной';
+           require ('templates/main.php');
        }elseif($page=='shop'){
-               echo 'Страница с товарами';
+               require ('templates/shop.php');
     }
         elseif($page=='product'){
-               echo 'Описание товара';
+            $id = $_GET['id'];
+            $good = [];
+            foreach ($goods as $product) {
+                if ($product['id']==$id) {
+                    $good=$product;
+                    break;
+                }
+            }
+            require ('templates/openproduct.php');
+
     }
 
   /*      $r = "<br>";
@@ -111,25 +120,6 @@
             <h1>
                 Каталог товаров
             </h1>
-            <div>
-                <div class="shopUnit">
-                    <img src="http://placehold.it/308x231" />
-
-                    <div class="shopUnitName">
-                        Название продукта
-                    </div>
-                    <div class="shopUnitShortDesc">
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                    </div>
-                    <div class="shopUnitPrice">
-                        Цена: 0000 $
-                    </div>
-                    <a href="#" class="shopUnitMore">
-                        Подробнее
-                    </a>
-                </div>
 
                 <div class="shopUnit">
                     <img src="http://placehold.it/308x231" />
@@ -150,25 +140,7 @@
                     </a>
                 </div>
 
-                <div class="shopUnit">
-                    <img src="http://placehold.it/308x231" />
 
-                    <div class="shopUnitName">
-                        Название продукта
-                    </div>
-                    <div class="shopUnitShortDesc">
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                        Здесь будет немного текста описывающего продукт.
-                    </div>
-                    <div class="shopUnitPrice">
-                        Цена: 0000 $
-                    </div>
-                    <a href="#" class="shopUnitMore">
-                        Подробнее
-                    </a>
-                </div>
-            </div>
         </div>
 
         <div style="margin-bottom: 20px; float: left;">
@@ -218,8 +190,8 @@
         </div>
 
         <div id="footerNav">
-            <a href="#">Главная</a>
-            <a href="#">Магазин</a>
+            <a href="/">Главная</a>
+            <a href="/index.php/?page=shop">Магазин</a>
         </div>
 
         <div id="social">
