@@ -48,9 +48,16 @@
             'price'=>'1400 $'
         ]
 ];
-        echo '<pre>';
-        var_dump($_GET);
-        if 
+       $page = $_GET['page'];
+       if(!isset($page)) {
+           echo 'Контен для главной';
+       }elseif($page=='shop'){
+               echo 'Страница с товарами';
+    }
+        elseif($page=='product'){
+               echo 'Описание товара';
+    }
+
   /*      $r = "<br>";
         foreach ($goods as $key => $good) {
             echo 'Ключ массива: ' . $key . $r;
