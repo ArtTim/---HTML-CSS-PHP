@@ -24,6 +24,56 @@
 </header>
 
 <div id="content">
+    <?php
+        $goods=[
+                [
+            'id'=>1,
+            'name'=>'Iphone',
+            'desc'=>'Описание для Iphone',
+            'img'=>'images/goods/iphone.jpg',
+            'price'=>'2000 $'
+        ],
+        [
+            'id'=>'2',
+            'name'=>'HTC',
+            'desc'=>'Описание для HTC',
+            'img'=>'images/goods/htc.jpg',
+            'price'=>'1200 $'
+        ],
+        [
+            'id'=>3,
+            'name'=>'Samsung',
+            'desc'=>'Описание для Samsung',
+            'img'=>'images/goods/samsung.jpg',
+            'price'=>'1400 $'
+        ]
+];
+        echo '<pre>';
+        var_dump($_GET);
+        if 
+  /*      $r = "<br>";
+        foreach ($goods as $key => $good) {
+            echo 'Ключ массива: ' . $key . $r;
+            echo $good['id'] . $r;
+            echo $good['name'] . $r;
+            echo $good['desc'] . $r;
+            echo $good['img'] . $r;
+            echo $good['price'] . $r;
+            echo '<hr>';
+        }*/
+/*        $goods[] = [
+            'id'=>4,
+            'name'=>'Explay',
+            'desc'=>'Описание',
+            'img'=>'images/goods/iphone.jpg',
+            'price'=>'800 $',
+            'discount'=>20,
+            'count'=>34
+        ];
+        $goods[2]['discount']=20;
+        echo '<pre>';
+        var_dump($goods)*/
+    ?>
    <!-- <div id="promo">
         <h1 id="promoText">
             Здесь будет рекламный заголовок
