@@ -2,6 +2,7 @@
         Каталог товаров
     </h1>
     <?php
+
     foreach ($goods as $good): ?>
     <div>
     <div class="shopUnit">
