@@ -10,8 +10,8 @@
 <body>
 <header>
     <div id="headerInside">
-        <div id="logo"></div>
-        <div id="companyName">Brand</div>
+        <a href="/"><div id="logo"></div></a>
+                <div id="companyName">Brand</div>
         <div id="navWrap">
             <a href="/">
                 Главная
@@ -26,28 +26,29 @@
 <div id="content">
     <?php
         $goods=[
-                [
-            'id'=>1,
-            'name'=>'Iphone',
-            'desc'=>'Описание для Iphone',
-            'img'=>'images/goods/iphone.jpg',
-            'price'=>'2000 $'
-        ],
-        [
-            'id'=>'2',
-            'name'=>'HTC',
-            'desc'=>'Описание для HTC',
-            'img'=>'images/goods/htc.jpg',
-            'price'=>'1200 $'
-        ],
-        [
-            'id'=>3,
-            'name'=>'Samsung',
-            'desc'=>'Описание для Samsung',
-            'img'=>'images/goods/samsung.jpg',
-            'price'=>'1400 $'
-        ]
+            [
+        'id'=>1,
+        'name'=>'Iphone',
+        'desc'=>'Описание для Iphone',
+        'img'=>'images/goods/iphone.jpg',
+        'price'=>'2000 $'
+    ],
+    [
+        'id'=>'2',
+        'name'=>'HTC',
+        'desc'=>'Описание для HTC',
+        'img'=>'images/goods/htc.jpg',
+        'price'=>'1200 $'
+    ],
+    [
+        'id'=>3,
+        'name'=>'Samsung',
+        'desc'=>'Описание для Samsung',
+        'img'=>'images/goods/samsung.jpg',
+        'price'=>'1400 $'
+    ]
 ];
+
        $page = $_GET['page'];
        if(!isset($page)) {
            require ('templates/main.php');
@@ -64,9 +65,9 @@
                 }
             }
             require ('templates/openproduct.php');
-
     }
-
+//Комментарий для теста КВС
+//    And new comment
   /*      $r = "<br>";
         foreach ($goods as $key => $good) {
             echo 'Ключ массива: ' . $key . $r;
